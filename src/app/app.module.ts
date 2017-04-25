@@ -2,20 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { HeroDetailComponent } from './heroes/hero-detail.component'
-import { HeroService } from './heroes/hero.service'
+import { HeroDetailComponent, HeroesListComponent } from './heroes/hero.module';
+import { HeroService } from './heroes/hero.service';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeroDetailComponent
+    AppComponent, HeroDetailComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
   ],
-  providers: [HeroService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
