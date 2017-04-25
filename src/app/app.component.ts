@@ -10,9 +10,5 @@ import { HeroService } from './heroes/hero.service'
 export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
 
-  ngOnInit() {  }
-
-  onSelectHero(hero: Hero): void {
-    // this.selectedHero = hero;
-  }
+  ngOnInit() { }
 }

@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HeroesListComponent } from './heroes/hero.module';
-import { HeroService } from './heroes/hero.service';
+import { HeroDetailComponent } from './heroes/hero.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeroesListComponent
+    AppComponent, HeroesListComponent, HeroDetailComponent
   ],
   imports: [
     BrowserModule,
