@@ -13,16 +13,20 @@ export class HeroesListComponent implements OnInit {
 
   constructor(private heroService: HeroService) { }
 
-  getHeroes(): void {
-    this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
+  async getHeroes(): Promise<Hero[]> {
+    try {
+      return Promise.resolve(await this.heroService.getHeroesSlowly());
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   onSelectHero(hero: Hero) {
     this.selectedHero = hero;
   }
 
-  ngOnInit(): void {
-    this.getHeroes();
+  async ngOnInit() {
+    this.heroes = await this.getHeroes();
   }
 
 }
