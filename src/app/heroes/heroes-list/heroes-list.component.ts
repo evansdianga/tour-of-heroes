@@ -14,7 +14,7 @@ export class HeroesListComponent implements OnInit {
   constructor(private heroService: HeroService) { }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
   }
 
   onSelectHero(hero: Hero) {

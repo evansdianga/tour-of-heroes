@@ -10,7 +10,7 @@ export {
 @NgModule({
     imports: [],
     // exports: [HeroesListComponent, HeroDetailComponent],
-    declarations: [HeroesListComponent, HeroDetailComponent],
+    // declarations: [HeroesListComponent, HeroDetailComponent],
     providers: [HeroService],
 })
 export class HeroModule { }
