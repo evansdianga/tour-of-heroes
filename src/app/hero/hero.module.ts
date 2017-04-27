@@ -13,6 +13,6 @@ export {
     imports: [BrowserModule, FormsModule],
     exports: [HeroesListComponent],
     providers: [HeroService],
-    declarations: [ HeroesListComponent, HeroDetailComponent],
+    declarations: [HeroesListComponent, HeroDetailComponent],
 })
 export class HeroModule { }

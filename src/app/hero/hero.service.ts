@@ -21,14 +21,20 @@ export class HeroService {
 
     getHeroesSlowly(): Promise<Hero[]> {
         return new Promise((resolve, reject) => {
-            setTimeout(() => resolve(this.getHeroes()), 3000);
+            setTimeout(() => resolve(this.getHeroes()), 1000);
         });
     }
 
     getHeroesAndFail(): Promise<Hero[]> {
         return new Promise((resolve, reject) => {
             reject('Fail');
-            setTimeout(() => resolve(this.getHeroes()), 3000);
+            setTimeout(() => resolve(this.getHeroes()), 1000);
         });
     }
+
+    getHero(id: number): Promise<Hero> {
+        return this.getHeroes()
+            .then(heroes => heroes.find(hero => hero.id === id));
+    }
+
 }
